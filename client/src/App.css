@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.Main-menu-title{
+  font-size: 32pt;
+  background-color: #40ccf3;
+  padding: 20px 0 20px 0;
+}
+
+.Vertical-buttons button{
+  display: block;
+  margin: 10px;
+}
+
+.Grid-container{
+  display: grid;
+}
+
+.Grid-items-center{
+  justify-content: center;
+  align-content: center;
+}
+
+.Center-page{
+  margin: auto auto;
+}
