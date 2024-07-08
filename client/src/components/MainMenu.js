@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from 'react';
+import PropTypes from "prop-types"
 
+import { MAP_ENUM } from "../enums/MapEnums";
  
-export default function MainMenu(){
+export default function MainMenu({startNewGameFunction}){
     const [visibleMenu, setVisibleMenu] = useState({
         menu: "startMenu"
     });
@@ -65,7 +67,7 @@ export default function MainMenu(){
                         </button>
                     </div>
                     <div>
-                        <button>
+                        <button onClick={() => startNewGameFunction(MAP_ENUM.FROZEN_FOG_LANDS)}>
                             Frozen Foglands
                         </button>
                     </div>
@@ -92,4 +94,8 @@ export default function MainMenu(){
         }
     }
 }
+
+MainMenu.propTypes = {
+    startNewGameFunction: PropTypes.func.isRequired
+};
 

@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
+    "prop-types": "^15.8.1",
     "react": "19.0.0-rc-3da26163a3-20240704",
     "react-dom": "19.0.0-rc-3da26163a3-20240704"
   },
