@@ -6,11 +6,17 @@
   font-size: 32pt;
   background-color: #40ccf3;
   padding: 20px 0 20px 0;
+  margin: 0 0 20px 0;
+}
+
+.Vertical-buttons{
+  display: block;
+  text-align: center;
+  align-items: center;
 }
 
 .Vertical-buttons button{
-  display: block;
-  margin: 10px;
+  margin: 5px;
 }
 
 .Grid-container{
@@ -20,8 +26,13 @@
 .Grid-items-center{
   justify-content: center;
   align-content: center;
+  text-align: center;
 }
 
 .Center-page{
   margin: auto auto;
+}
+
+.Hidden{
+  display: hidden;
 }
