@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import PropTypes from "prop-types"
 
-import { MAP_ENUM } from "../enums/MapEnums";
+import { SCENE_ENUM } from "../../enums/MapEnums";
  
 export default function MainMenu({startNewGameFunction}){
     const [visibleMenu, setVisibleMenu] = useState({
@@ -47,9 +47,7 @@ export default function MainMenu({startNewGameFunction}){
                             New Game
                         </button>
                     </div>
-                    
                 </div>
-
             );
         }
         else{
@@ -67,7 +65,7 @@ export default function MainMenu({startNewGameFunction}){
                         </button>
                     </div>
                     <div>
-                        <button onClick={() => startNewGameFunction(MAP_ENUM.FROZEN_FOG_LANDS)}>
+                        <button onClick={() => startNewGameFunction(SCENE_ENUM.FROZEN_FOG_LANDS)}>
                             Frozen Foglands
                         </button>
                     </div>

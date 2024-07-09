@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as TestImage} from "../svgs/placeholderHome.svg";
+import {ReactComponent as TestImage} from "../../svgs/placeholderHome.svg";
 
 export default function MapFrozenFoglands(){
     return(
