@@ -9,6 +9,24 @@
   margin: 0 0 20px 0;
 }
 
+.UI-header{
+  font-size: 32pt;
+  background-color: #40ccf3;
+  padding: 20px 20px 20px 20px;
+  margin: 0 0 20px 0;
+}
+
+.UI-header .Location-title{
+  text-align: left;
+}
+
+.UI-footer{
+  font-size: 32pt;
+  background-color: #40ccf3;
+  padding: 20px 20px 20px 20px;
+  margin: 0 0 20px 0;
+}
+
 .Vertical-buttons{
   display: block;
   text-align: center;
