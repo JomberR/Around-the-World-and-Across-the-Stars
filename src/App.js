@@ -33,7 +33,6 @@ function App() {
     setGameState({scene: map});
   }
 
-  //Local Components
   function ActiveScene(){
     switch(gameState.scene){
       case SCENE_ENUM.MENUS:
