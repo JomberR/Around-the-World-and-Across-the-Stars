@@ -24,7 +24,7 @@
   font-size: 32pt;
   background-color: #40ccf3;
   padding: 20px 20px 20px 20px;
-  margin: 0 0 20px 0;
+  margin: 40px 0 20px 0;
 }
 
 .Vertical-buttons{
@@ -49,6 +49,11 @@
 
 .Center-page{
   margin: auto auto;
+}
+
+.Wonder-title{
+  text-align: center;
+  font-size: 32px;
 }
 
 .Hidden{

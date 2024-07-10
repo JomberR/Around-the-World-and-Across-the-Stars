@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import PropTypes from "prop-types"
 
-import { SCENE_ENUM } from "../../enums/MapEnums";
+import { SCENE_ENUM } from "../../../common/enums/MapEnums";
  
 export default function MainMenu({startNewGameFunction}){
     const [visibleMenu, setVisibleMenu] = useState({
@@ -14,13 +14,14 @@ export default function MainMenu({startNewGameFunction}){
             <div className="Main-menu-title">
                 Around the World and Across the Stars
             </div>
+
             <div className="Grid-container Grid-items-center Center-page">
                 <div className="Vertical-buttons">
-
                     <StartMenu/>
                     <LevelSelectMenu/>
                 </div>
             </div>
+            
         </div>
     );
 

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types"
 
 export default function Header({locationName}){
     return(
@@ -12,7 +11,3 @@ export default function Header({locationName}){
         </div>
     );
 }
-
-Header.propTypes = {
-    locationName: PropTypes.string.isRequired
-};
