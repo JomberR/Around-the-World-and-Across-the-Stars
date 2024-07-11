@@ -1,5 +1,5 @@
 import React from "react";
-import ProcessTurn from "../../../Controller/ProcessTurn";
+import ProcessTurn from "../../../controller/ProcessTurn";
 
 export default function EndTurnButton(){
     return(
