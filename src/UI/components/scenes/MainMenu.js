@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from 'react';
 import PropTypes from "prop-types"
 
 import { SCENE_ENUM } from "../../../common/enums/SceneEnums";
+import { STORAGE_ENUM } from "../../../common/enums/StorageEnums";
  
 export default function MainMenu({startNewGameFunction, continueGameFunction}){
-    const [visibleMenu, setVisibleMenu] = useState({
-        menu: "startMenu"
-    });
+    const [visibleMenu, setVisibleMenu] = useState("startMenu");
+
+    const [continueDisabled, setContinueDisabled] = useState(false);
+
+    useEffect(() => {
+        //Can't continue a game if we never started one.
+        if(localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP) === null){
+            setContinueDisabled(true);
+        }
+    }, []);
 
     return(
         <div>
@@ -26,20 +34,20 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
     );
 
     function GoToLevelSelect(){
-        setVisibleMenu({menu: "levelSelect"});
+        setVisibleMenu("levelSelect");
     }
 
     function GoToStartMenu(){
-        setVisibleMenu({menu: "startMenu"});
+        setVisibleMenu("startMenu");
     }
 
     //Local Components
     function StartMenu(){
-        if (visibleMenu.menu === "startMenu"){
+        if (visibleMenu === "startMenu"){
             return(
                 <div>
                     <div>
-                        <button onClick={() => continueGameFunction()}>
+                        <button onClick={() => continueGameFunction()} disabled={continueDisabled}>
                             Continue
                         </button>
                     </div>
@@ -57,7 +65,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
     }
 
     function LevelSelectMenu(){
-        if (visibleMenu.menu === "levelSelect"){
+        if (visibleMenu === "levelSelect"){
             return(
                 <div>
                     <div>
