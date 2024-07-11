@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from 'react';
 
-import { SCENE_ENUM } from "./common/enums/MapEnums";
+import { SCENE_ENUM } from "./common/enums/SceneEnums";
 
 import MainMenu from "./UI/components/scenes/MainMenu";
 import MapFrozenFoglands from "./UI/components/scenes/MapFrozenFoglands"
 import './App.css';
+import { STORAGE_ENUM } from "./common/enums/StorageEnums";
 
 function App() {
 
@@ -26,6 +27,11 @@ function App() {
   function startNewGame(map){
     localStorage.clear();
     setGameState({scene: map});
+    localStorage.setItem(STORAGE_ENUM.ACTIVE_MAP, map);
+  }
+
+  function continueGame(){
+    setGameState({scene: localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP)});
   }
 
   function ActiveScene(){
@@ -33,7 +39,7 @@ function App() {
       
       case SCENE_ENUM.MENUS:
         return(
-          <MainMenu startNewGameFunction={startNewGame}/>
+          <MainMenu startNewGameFunction={startNewGame} continueGameFunction={continueGame}/>
         );
 
       case SCENE_ENUM.FROZEN_FOG_LANDS:

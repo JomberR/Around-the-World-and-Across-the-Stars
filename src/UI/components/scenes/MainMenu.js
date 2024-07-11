@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from 'react';
 import PropTypes from "prop-types"
 
-import { SCENE_ENUM } from "../../../common/enums/MapEnums";
+import { SCENE_ENUM } from "../../../common/enums/SceneEnums";
  
-export default function MainMenu({startNewGameFunction}){
+export default function MainMenu({startNewGameFunction, continueGameFunction}){
     const [visibleMenu, setVisibleMenu] = useState({
         menu: "startMenu"
     });
@@ -39,7 +39,7 @@ export default function MainMenu({startNewGameFunction}){
             return(
                 <div>
                     <div>
-                        <button onClick={() => alert("Not implemented!")}>
+                        <button onClick={() => continueGameFunction()}>
                             Continue
                         </button>
                     </div>
