@@ -1,5 +1,5 @@
 import React from "react";
-import Wonder from "../../locations/locationComponents/Wonder";
+import Wonder from "../locationComponents/Wonder";
 
 import {ReactComponent as TestImage} from "../../../svgs/placeholderHome.svg";
 

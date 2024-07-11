@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 import { SCENE_ENUM } from "./common/enums/SceneEnums";
 
-import MainMenu from "./UI/components/scenes/MainMenu";
-import MapFrozenFoglands from "./UI/components/scenes/MapFrozenFoglands"
+import MainMenu from "./display/components/scenes/MainMenu";
+import MapFrozenFoglands from "./display/components/scenes/MapFrozenFoglands"
 import './App.css';
 import { STORAGE_ENUM } from "./common/enums/StorageEnums";
 
