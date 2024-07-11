@@ -8,14 +8,14 @@ import EndTurnButton from "../actions/EndTurnButton";
 
 export default function Footer(){
 
-    const [turnCount, setTurnCount] = useState(localStorage.getItem(STORAGE_ENUM.TURN_COUNT) || 1);
+    const [turnCount, setTurnCount] = useState(localStorage.getItem(STORAGE_ENUM.TURN_COUNT.toString()) || 1);
     const windowRef = useRef(window);
     
     useEffect(() => {
         const currentWindowRef = windowRef.current;
-        currentWindowRef.addEventListener(EVENT_ENUM.TURN_END, () => setTurnCount(localStorage.getItem(STORAGE_ENUM.TURN_COUNT) || 1));
+        currentWindowRef.addEventListener(EVENT_ENUM.TURN_END.toString(), () => setTurnCount(localStorage.getItem(STORAGE_ENUM.TURN_COUNT.toString()) || 1));
 
-        return () => currentWindowRef.removeEventListener(EVENT_ENUM.TURN_END, setTurnCount);
+        return () => currentWindowRef.removeEventListener(EVENT_ENUM.TURN_END.toString(), setTurnCount);
     }, [])
 
 

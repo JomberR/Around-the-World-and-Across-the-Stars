@@ -12,7 +12,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
 
     useEffect(() => {
         //Can't continue a game if we never started one.
-        if(localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP) === null){
+        if(localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP.toString()) === null){
             setContinueDisabled(true);
         }
     }, []);
@@ -74,7 +74,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
                         </button>
                     </div>
                     <div>
-                        <button onClick={() => startNewGameFunction(SCENE_ENUM.FROZEN_FOG_LANDS)}>
+                        <button onClick={() => startNewGameFunction(SCENE_ENUM.FROZEN_FOG_LANDS.toString())}>
                             Frozen Foglands
                         </button>
                     </div>
