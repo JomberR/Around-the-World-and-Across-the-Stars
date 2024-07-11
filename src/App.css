@@ -39,9 +39,14 @@
 
 .Grid-container{
   display: grid;
+  text-align: center;
 }
 
-.Grid-items-center{
+.Grid-container.Grid-container-3-col{
+  grid-template-columns: auto auto auto;
+}
+
+.Grid-item-center{
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -52,12 +57,12 @@
 }
 
 .Wonder-title{
-  text-align: center;
+  text-align: inherit;
   font-size: 32px;
 }
 
-.Location-title{
-  text-align: center;
+.Site-title{
+  text-align: inherit;
   font-size: 24px;
 }
 

@@ -2,11 +2,10 @@ import React from "react";
 
 import Location from "./Location";
 
-export default function Wonder(props){
+export default function Site(props){
     const modifiedProps = {...props,
-        classTitleName: "Wonder-title"
+        classTitleName: "Site-title"
     }
-
     return(
         <>
             <Location {...modifiedProps}/>

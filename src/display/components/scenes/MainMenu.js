@@ -23,7 +23,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
                 Around the World and Across the Stars
             </div>
 
-            <div className="Grid-container Grid-items-center Center-page">
+            <div className="Grid-container Center-page">
                 <div className="Vertical-buttons">
                     <StartMenu/>
                     <LevelSelectMenu/>
