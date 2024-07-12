@@ -6,8 +6,8 @@ import { ReactComponent as TestImage} from "../../../svgs/placeholderFieldHospit
 const fieldHospitalProps = {
     name: "Field Hospital",
     Image: TestImage,
-    imageWidth: "100px",
-    imageHeight: "100px"
+    imageHeight: "10vh",
+    imageWidth: "10vw"
 };
 
 export default function FieldHospital(){

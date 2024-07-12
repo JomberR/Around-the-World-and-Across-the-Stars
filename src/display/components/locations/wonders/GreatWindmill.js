@@ -6,8 +6,8 @@ import {ReactComponent as TestImage} from "../../../svgs/placeholderWonder.svg";
 const greatWindmillProps = {
     name: "The Great Windmill",
     Image: TestImage,
-    imageHeight: "240px",
-    imageWidth: "240px"
+    imageHeight: "25vh",
+    imageWidth: "25vw"
 };
 
 export default function GreatWindmill(){
