@@ -6,11 +6,12 @@ import Footer from "../ui/Footer"
 
 export default function MapFrozenFoglands(){
     return(
-        <div>
+        <div className="Game-window">
             <Header locationName="The Frozen Foglands"/>
 
             <div className="Grid-container Hex-layout">
 
+                {/* Top */}
                 <div className="Grid-item-center Hex-layout-item1">
                     <FieldHospital/>
                 </div>
@@ -18,6 +19,7 @@ export default function MapFrozenFoglands(){
                     <FieldHospital/>
                 </div>
 
+                {/* Middle */}
                 <div className="Grid-item-center Hex-layout-item3">
                     <FieldHospital/>
                 </div>
@@ -28,13 +30,14 @@ export default function MapFrozenFoglands(){
                     <FieldHospital/>
                 </div>
 
+                {/* Bottom */}
                 <div className="Grid-item-center Hex-layout-item6">
                     <FieldHospital/>
                 </div>
                 <div className="Grid-item-center Hex-layout-item7">
                     <FieldHospital/>
                 </div>
-                
+
             </div>
 
             <Footer/>
