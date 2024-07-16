@@ -1,13 +1,10 @@
 export default class Place {
     name = "";
-    position = [];
     heroList = [];
-
     taskList = [];
 
-    constructor(name, position, taskList){
+    constructor(name, taskList){
         this.name = name;
-        this.position = position;
         this.taskList = taskList;
     }
 }

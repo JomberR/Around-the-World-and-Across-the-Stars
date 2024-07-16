@@ -6,6 +6,8 @@ export default function Location(props){
             <props.Image height={props.imageHeight} width={props.imageWidth}/>
             <div className={props.classTitleName}>
                 {props.name}
+                <br></br>
+                {props.locationId}
             </div>
         </div>
     );

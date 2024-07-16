@@ -24,7 +24,7 @@ export function getTask(taskID){
             return RepairFortificationsTask;
         default:
             console.error(`TASK ${taskID.toString()} NOT FOUND!`);
-            break;
+            throw new Error("Task not found.");
     }
 }
 

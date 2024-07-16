@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from 'react';
 
-import { SCENE_ENUM } from "./common/enums/SceneEnums";
+import { SCENE_ENUM, STORAGE_ENUM } from "./common/enums/Enums";
+
+import {newGame} from "./controller/NewGame";
 
 import MainMenu from "./display/components/scenes/MainMenu";
 import MapFrozenFoglands from "./display/components/scenes/MapFrozenFoglands"
+
 import './App.css';
-import { STORAGE_ENUM } from "./common/enums/StorageEnums";
+
 
 function App() {
 
@@ -24,10 +27,11 @@ function App() {
     </div>
   );
 
-  function startNewGame(map){
-    localStorage.clear();
-    setGameState({scene: map});
-    localStorage.setItem(STORAGE_ENUM.ACTIVE_MAP.toString(), map);
+  function startNewGame(mapEnum){
+    newGame(mapEnum)
+    let mapString = mapEnum.toString();
+    setGameState({scene: mapString});
+    localStorage.setItem(STORAGE_ENUM.ACTIVE_MAP.toString(), mapString);
   }
 
   function continueGame(){

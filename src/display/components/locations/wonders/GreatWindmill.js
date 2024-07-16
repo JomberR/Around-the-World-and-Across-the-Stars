@@ -3,14 +3,16 @@ import React from "react";
 import Wonder from "../locationComponents/Wonder";
 import {ReactComponent as TestImage} from "../../../svgs/placeholderWonder.svg";
 
-const greatWindmillProps = {
-    name: "The Great Windmill",
-    Image: TestImage,
-    imageHeight: "25vh",
-    imageWidth: "25vw"
-};
 
-export default function GreatWindmill(){
+export default function GreatWindmill(props){
+    const greatWindmillProps = {
+        ...props,
+        name: "The Great Windmill",
+        Image: TestImage,
+        imageHeight: "15vh",
+        imageWidth: "15vw"
+    };
+
     return(
         <>
             <Wonder {...greatWindmillProps}/>

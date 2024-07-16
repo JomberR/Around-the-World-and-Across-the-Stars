@@ -1,5 +1,4 @@
-import { EVENT_ENUM } from "../common/enums/EventEnums";
-import { STORAGE_ENUM } from "../common/enums/StorageEnums";
+import { EVENT_ENUM, STORAGE_ENUM  } from "../common/enums/Enums";
 
 export default function ProcessTurn(){
     let turnCount = parseInt(localStorage.getItem(STORAGE_ENUM.TURN_COUNT.toString()) || 1);

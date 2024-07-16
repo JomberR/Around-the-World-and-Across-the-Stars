@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from 'react';
 import PropTypes from "prop-types"
 
-import { SCENE_ENUM } from "../../../common/enums/SceneEnums";
-import { STORAGE_ENUM } from "../../../common/enums/StorageEnums";
+import { SCENE_ENUM, STORAGE_ENUM } from "../../../common/enums/Enums";
  
 export default function MainMenu({startNewGameFunction, continueGameFunction}){
     const [visibleMenu, setVisibleMenu] = useState("startMenu");
@@ -74,7 +73,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
                         </button>
                     </div>
                     <div>
-                        <button onClick={() => startNewGameFunction(SCENE_ENUM.FROZEN_FOG_LANDS.toString())}>
+                        <button onClick={() => startNewGameFunction(SCENE_ENUM.FROZEN_FOG_LANDS)}>
                             Frozen Foglands
                         </button>
                     </div>

@@ -3,6 +3,7 @@ import GreatWindmill from "../locations/wonders/GreatWindmill";
 import FieldHospital from "../locations/sites/FieldHospital";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer"
+import { LOCATION_ENUM } from "../../../common/enums/Enums";
 
 export default function MapFrozenFoglands(){
     return(
@@ -13,29 +14,29 @@ export default function MapFrozenFoglands(){
 
                 {/* Top */}
                 <div className="Grid-item-center Hex-layout-item1">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_0.toString()}/>
                 </div>
                 <div className="Grid-item-center Hex-layout-item2">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_1.toString()}/>
                 </div>
 
                 {/* Middle */}
                 <div className="Grid-item-center Hex-layout-item3">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_2.toString()}/>
                 </div>
                 <div className="Grid-item-center Hex-layout-item4">
-                    <GreatWindmill className="Grid-item-center"/>
+                    <GreatWindmill locationId={LOCATION_ENUM.LOCATION_ID_3.toString()}/>
                 </div>
                 <div className="Grid-item-center Hex-layout-item5">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_4.toString()}/>
                 </div>
 
                 {/* Bottom */}
                 <div className="Grid-item-center Hex-layout-item6">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_5.toString()}/>
                 </div>
                 <div className="Grid-item-center Hex-layout-item7">
-                    <FieldHospital/>
+                    <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_6.toString()}/>
                 </div>
 
             </div>

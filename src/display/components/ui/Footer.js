@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 
-import { STORAGE_ENUM } from "../../../common/enums/StorageEnums";
-import { EVENT_ENUM } from "../../../common/enums/EventEnums";
+import { STORAGE_ENUM, EVENT_ENUM } from "../../../common/enums/Enums";
 
 import EndTurnButton from "../actions/EndTurnButton";
 
