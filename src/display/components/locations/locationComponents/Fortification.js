@@ -14,8 +14,8 @@ export default function Fortification(props){
         setCurrentFortification(location.currentFortification);
         setMaxFortification(location.maxFortification);
 
-        currentWindowRef.addEventListener(EVENT_ENUM.TURN_END.toString(), () => updateState());
-        return () => currentWindowRef.removeEventListener(EVENT_ENUM.TURN_END.toString(), updateState);
+        currentWindowRef.addEventListener(EVENT_ENUM.TURN_END, () => updateState());
+        return () => currentWindowRef.removeEventListener(EVENT_ENUM.TURN_END, updateState);
     }, [])
 
     return(

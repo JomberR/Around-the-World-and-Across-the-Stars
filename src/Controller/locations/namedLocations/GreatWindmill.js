@@ -1,3 +1,4 @@
+import { LOCATION_ENUM } from "../../../common/enums/Enums";
 import Wonder from "../Wonder";
 
 export default class GreatWindmill{

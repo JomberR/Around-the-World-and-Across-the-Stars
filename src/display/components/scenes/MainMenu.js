@@ -11,7 +11,7 @@ export default function MainMenu({startNewGameFunction, continueGameFunction}){
 
     useEffect(() => {
         //Can't continue a game if we never started one.
-        if(localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP.toString()) === null){
+        if(localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP) === null){
             setContinueDisabled(true);
         }
     }, []);

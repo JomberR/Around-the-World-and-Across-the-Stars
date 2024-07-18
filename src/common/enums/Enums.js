@@ -1,34 +1,46 @@
 export const SCENE_ENUM = Object.freeze({
-    MENUS: Symbol("menus"),
-    FROZEN_FOG_LANDS: Symbol("frozenFoglands"),
-    DEEP_DARK: Symbol("deepDark"),
-    CRYSTAL_CAVERNS: Symbol("crystalCaverns"),
-    LAST_LIGHT: Symbol("lastLight")
+    CURRENT_SCENE: "currentScene",
+
+    MENUS: "menus",
+    FROZEN_FOG_LANDS: "frozenFoglands",
+    DEEP_DARK: "deepDark",
+    CRYSTAL_CAVERNS: "crystalCaverns",
+    LAST_LIGHT: "lastLight"
 });
 
 export const EVENT_ENUM = Object.freeze({
-    TURN_END: Symbol("turnEnd")
+    TURN_END: "turnEnd"
 });
 
 export const STORAGE_ENUM = Object.freeze({
-    TURN_COUNT: Symbol("turnCount"),
-    ACTIVE_MAP: Symbol("activeMap")
+    TURN_COUNT: "turnCount",
+    ACTIVE_MAP: "activeMap"
 });
 
 export const LOCATION_ENUM = Object.freeze({
-    LOCATION_ID_0: Symbol("locationId0"),
-    LOCATION_ID_1: Symbol("locationId1"),
-    LOCATION_ID_2: Symbol("locationId2"),
-    LOCATION_ID_3: Symbol("locationId3"),
-    LOCATION_ID_4: Symbol("locationId4"),
-    LOCATION_ID_5: Symbol("locationId5"),
-    LOCATION_ID_6: Symbol("locationId6")
+    LOCATION_ID_0: "locationId0",
+    LOCATION_ID_1: "locationId1",
+    LOCATION_ID_2: "locationId2",
+    LOCATION_ID_3: "locationId3",
+    LOCATION_ID_4: "locationId4",
+    LOCATION_ID_5: "locationId5",
+    LOCATION_ID_6: "locationId6",
 });
 
 export const SITE_ENUM = Object.freeze({
-    FIELD_HOSPITAL: Symbol("fieldHospital") 
+    FIELD_HOSPITAL: "fieldHospital"
 });
 
 export const WONDER_ENUM = Object.freeze({
-    GREAT_WINDMILL: Symbol("greatWindmill")
+    GREAT_WINDMILL: "greatWindmill"
+});
+
+export const FROZEN_FOG_LANDS_ENUM = Object.freeze({
+    MAX_FOG: 100
+});
+
+export const TASK_LIST_ENUM = Object.freeze({
+    REST_RESUPPLY: "restResupply",
+    REPAIR_FORTIFICATIONS: "repairFort",
+    REPEL_FOG: "repelFog"
 });

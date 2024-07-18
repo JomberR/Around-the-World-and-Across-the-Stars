@@ -2,7 +2,18 @@ import Place from "./Place";
 
 export default class Site extends Place{
     threatList = [];
-    baseFortification = 10;
-    currentFortification = this.baseFortification;
-    maxFortification = this.baseFortification;;
+
+    currentFortification;
+    maxFortification;
+
+    currentFogLevel = 0;
+
+    constructor(locationName, taskList, placeId, baseFortification){
+        super(locationName, taskList, placeId);
+
+        this.currentFortification = baseFortification;
+        this.maxFortification = baseFortification;
+    }
+
+    
 }

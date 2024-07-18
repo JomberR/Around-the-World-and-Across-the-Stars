@@ -14,7 +14,7 @@ import './App.css';
 function App() {
 
     const [gameState, setGameState] = useState({
-      scene: SCENE_ENUM.MENUS.toString()
+      scene: SCENE_ENUM.MENUS
   });
 
   return (
@@ -29,24 +29,24 @@ function App() {
 
   function startNewGame(mapEnum){
     newGame(mapEnum)
-    let mapString = mapEnum.toString();
+    let mapString = mapEnum;
     setGameState({scene: mapString});
-    localStorage.setItem(STORAGE_ENUM.ACTIVE_MAP.toString(), mapString);
+    localStorage.setItem(STORAGE_ENUM.ACTIVE_MAP, mapString);
   }
 
   function continueGame(){
-    setGameState({scene: localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP.toString())});
+    setGameState({scene: localStorage.getItem(STORAGE_ENUM.ACTIVE_MAP)});
   }
 
   function ActiveScene(){
     switch(gameState.scene){
       
-      case SCENE_ENUM.MENUS.toString():
+      case SCENE_ENUM.MENUS:
         return(
           <MainMenu startNewGameFunction={startNewGame} continueGameFunction={continueGame}/>
         );
 
-      case SCENE_ENUM.FROZEN_FOG_LANDS.toString():
+      case SCENE_ENUM.FROZEN_FOG_LANDS:
         return(
           <MapFrozenFoglands/>
         );
