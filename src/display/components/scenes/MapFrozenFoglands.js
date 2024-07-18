@@ -12,6 +12,7 @@ export default function MapFrozenFoglands(){
 
             <div className="Grid-container Hex-layout">
 
+                {/* Make sure these line up with NewGame.js */}
                 {/* Top */}
                 <div className="Grid-item-center Hex-layout-item1">
                     <FieldHospital locationId={LOCATION_ENUM.LOCATION_ID_0.toString()}/>

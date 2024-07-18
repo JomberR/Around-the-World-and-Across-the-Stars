@@ -7,7 +7,6 @@ export default function Location(props){
             <div className={props.classTitleName}>
                 {props.name}
                 <br></br>
-                {props.locationId}
             </div>
         </div>
     );

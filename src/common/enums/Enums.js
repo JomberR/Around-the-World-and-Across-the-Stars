@@ -24,3 +24,11 @@ export const LOCATION_ENUM = Object.freeze({
     LOCATION_ID_5: Symbol("locationId5"),
     LOCATION_ID_6: Symbol("locationId6")
 });
+
+export const SITE_ENUM = Object.freeze({
+    FIELD_HOSPITAL: Symbol("fieldHospital") 
+});
+
+export const WONDER_ENUM = Object.freeze({
+    GREAT_WINDMILL: Symbol("greatWindmill")
+});

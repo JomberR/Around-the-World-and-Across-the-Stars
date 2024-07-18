@@ -10,6 +10,7 @@ export default function Wonder(props){
     return(
         <>
             <Location {...modifiedProps}/>
+            {props.locationId}
         </>
     );
 }
