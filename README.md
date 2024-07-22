@@ -1,1 +1,1 @@
-# A webapp using the React library
+# A browser game using the React library
