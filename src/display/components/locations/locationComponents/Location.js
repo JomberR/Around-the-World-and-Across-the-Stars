@@ -1,4 +1,5 @@
 import React from "react";
+import OpenLocationButton from "../../buttons/OpenLocationButton";
 
 export default function Location(props){
     return(
@@ -7,6 +8,10 @@ export default function Location(props){
             <div className={props.classTitleName}>
                 {props.name}
                 <br></br>
+                {props.locationId}
+            </div>
+            <div>
+                <OpenLocationButton/>
             </div>
         </div>
     );

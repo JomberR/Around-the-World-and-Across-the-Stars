@@ -9,7 +9,8 @@ export const SCENE_ENUM = Object.freeze({
 });
 
 export const EVENT_ENUM = Object.freeze({
-    TURN_END: "turnEnd"
+    TURN_END: "turnEnd",
+    OPEN_LOCATION_MODAL: "openLocationModal"
 });
 
 export const STORAGE_ENUM = Object.freeze({

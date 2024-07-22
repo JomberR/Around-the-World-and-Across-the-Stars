@@ -5,14 +5,14 @@
 .Main-menu-title{
   font-size: 32pt;
   background-color: #40ccf3;
-  padding: 20px 0 20px 0;
+  padding: 15px;
   margin: 0 0 20px 0;
 }
 
 .UI-header{
   font-size: 32pt;
   background-color: #40ccf3;
-  padding: 20px 20px 20px 20px;
+  padding: 15px;
   margin: 0 0 20px 0;
 }
 
@@ -23,7 +23,7 @@
 .UI-footer{
   font-size: 32pt;
   background-color: #40ccf3;
-  padding: 20px 20px 20px 20px;
+  padding: 15px;
   margin: auto 0 0 0;
 }
 
@@ -149,4 +149,9 @@
 
 .Hidden{
   display: hidden;
+}
+
+dialog::backdrop {
+  background-color: gray;
+  opacity: 75%;
 }

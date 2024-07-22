@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import GreatWindmill from "../locations/wonders/GreatWindmill";
 import FieldHospital from "../locations/sites/FieldHospital";
 import Header from "../ui/Header";
@@ -6,8 +6,13 @@ import Footer from "../ui/Footer"
 import { LOCATION_ENUM } from "../../../common/enums/Enums";
 
 export default function MapFrozenFoglands(){
+    const [isDialogVisible, setDialogVisible] = useState(false);
+
+    const dialogRef = useRef();
+
     return(
         <div className="Game-window">
+            <LocationDialog/>
             <Header locationName="The Frozen Foglands"/>
 
             <div className="Grid-container Hex-layout">
@@ -45,4 +50,26 @@ export default function MapFrozenFoglands(){
             <Footer/>
         </div>
     );
+
+    function toggleDialog(){
+        if (isDialogVisible){
+            setDialogVisible(false);
+        }
+        else{
+            setDialogVisible(true);
+        }
+    }
+
+    function LocationDialog(){
+        if(isDialogVisible){
+            return(
+                <div>
+                    <dialog ref={dialogRef} open className="Modal-location">
+                        <p>Test!</p>
+                        <button onClick={toggleDialog}>Close</button>
+                    </dialog>
+                </div>
+            );
+        }
+    }
 }
